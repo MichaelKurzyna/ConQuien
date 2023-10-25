@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Con Quien</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://img.freepik.com/premium-vector/poker-table-background-green-color_47243-1833.jpg'); /* Set the background image */
+            background-size: cover;
+            background-position:50% 50%;
+            min-height: 100vh;
+            image-rendering: -webkit-optimize-contrast;
+        }
+
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Con Quien</title>
+</head>
+<body>
+    <header class="text-4xl text-white text-center p-4">
+        Con Quien
+    </header>
+      <div class="grid grid-cols-5 gap-4 min-h-screen max-h-screen">
+        <div id="opponent-hand" class="col-span-4 flex justify-center items-center">01</div>
+        <div class="col-start-1 col-end-3 flex justify-center items-center">02</div>
+        <div class="col-end-7 col-span-2 flex justify-center items-center">03</div>
+        <div class="col-start-1 col-end-7 flex justify-center items-center">04</div>
+      </div>
+    
+</body>
+</html>
