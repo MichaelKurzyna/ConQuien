@@ -1,24 +1,34 @@
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Con Quien</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Con Quien con me!</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
     <header class="text-4xl text-white text-center p-4">
         Con Quien
     </header>
-    <a href="/">Home</a>
-    <a href="/grid/">Grid</a>
-
-    <h1>About Me</h1>
-    <h2>... and my new Astro site!</h2>
+    <script src="./Game.ts"></script>
       <div class="grid grid-cols-5 gap-4 min-h-screen max-h-screen">
-        <div id="opponent-hand" class="col-span-4 flex justify-center items-center">01</div>
-        <div class="col-start-1 col-end-3 flex justify-center items-center">02</div>
+        <div class="opponent-container col-start-1 col-end-7 grid-rows-2 flex justify-center items-center"></div>
+        <div id="opponent-name" class="col-span-4 flex justify-center items-center"></div>
+        <div id="opponent-hand-div" class="col-span-4 flex justify-center items-center">
+          <style>
+            card {
+              height: 50px;
+              width: 50px;
+            }
+          </style>01
+        </div>
+        <div id="deck"class="col-start-1 col-end-3 flex justify-center items-center">02
+
+        </div>
         <div class="col-end-7 col-span-2 flex justify-center items-center">03</div>
-        <div class="col-start-1 col-end-7 flex justify-center items-center">04</div>
+        <div class="player-container col-start-1 col-end-7 grid-rows-2 flex justify-center items-center"></div>
+        <div id="player-name" class="col-span-4 flex justify-center items-center"></div>
+        <div id="player-hand" class="col-span-4 flex justify-center items-center">04</div>
       </div>
     
 </body>

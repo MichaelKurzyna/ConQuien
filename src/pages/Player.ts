@@ -1,6 +1,6 @@
 class Player {
     name: string;
-    hand: { rank: string; suit: string }[] = [];
+    hand: Card[] = [];
     revealedHand: { type: string; cards: { rank: string; suit: string }[] }[] = [];
   
     constructor(name: string) {
@@ -17,3 +17,9 @@ class Player {
   }
   
   export default Player;
+
+  interface Card {
+    rank: string;
+    suit: string;
+    image: string;
+  }

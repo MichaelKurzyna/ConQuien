@@ -1,9 +1,10 @@
-import Player from './player';
+import Player from './Player';
+import { cards } from './Cards';
 class CardGame {
     numPlayers: number;
     players: Player[] = [];
-    deck: { rank: string; suit: string }[] = [];
-    discardPile: { rank: string; suit: string }[] = [];
+    deck: Card[] = [];
+    discardPile: Card[] = [];
   
     constructor(numPlayers: number) {
       this.numPlayers = numPlayers;
@@ -11,11 +12,11 @@ class CardGame {
     }
   
     initializeGame(): void {
-      // Define a standard deck of cards
-      const suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades'];
-      const ranks = ['Ace', '2', '3', '4', '5', '6', '7', 'Jack', 'Queen', 'King'];
-  
-      this.deck = suits.flatMap((suit) => ranks.map((rank) => ({ rank, suit })));
+      this.deck = [...cards];
+      //Shuffle a couple of times
+      for(let i = 0; i < 10; i++){
+        this.shuffleDeck()
+      }
   
       // Create players
       for (let i = 0; i < this.numPlayers; i++) {
@@ -43,5 +44,18 @@ class CardGame {
       }
       return null;
     }
+
+    shuffleDeck(): void {
+      for (let i = this.deck.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [this.deck[i], this.deck[j]] = [this.deck[j], this.deck[i]];
+      }
+    }
   }
   export default CardGame;
+
+  interface Card {
+    rank: string;
+    suit: string;
+    image: string;
+  }
